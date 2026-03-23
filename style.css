@@ -1,29 +1,46 @@
-.game {
-  width: 600px;
-  height: 200px;
-  border: 3px solid black;
-  margin: auto;
-}
 body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("nee.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
+.game {
+  width: 700px;
+  height: 300px;
+  border: 3px solid black;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
 
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
 
-
-
-
+#highscore {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
 
 
 #dino {
   width: 50px;
   height: 50px;
-  background-image: url(afbeelding/dino.jpg);
-  background-size: 50px 50px; 
-  position: relative;
+  background-image: url("afbeelding/dino.jpg");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 20px;
   top: 150px;
 }
 
@@ -56,16 +73,14 @@ body {
 #plant {
   width: 20px;
   height: 40px;
-  position: relative;
-  top: 110px;
-  left: 580px;
-
   background-image: url("afbeelding/plant.jpg");
   background-size: 20px 40px;
-
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 160px;
+  left: 580px;
   animation: block 1s infinite linear;
 }
-
 
 @keyframes block {
   0% {
@@ -77,6 +92,17 @@ body {
   }
 }
 
+#newRecord {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: green;
+  display: none;
+  font-weight: bolder;
+}
+
 #gameOver {
   position: absolute;
   top: 50%;
@@ -86,5 +112,4 @@ body {
   color: red;
   display: none;
   font-weight: bolder;
-  
 }
